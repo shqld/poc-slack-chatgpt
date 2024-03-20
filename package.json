@@ -1,0 +1,30 @@
+{
+	"name": "chatgpt",
+	"private": true,
+	"scripts": {
+		"---SETUP---": "",
+		"prepare": "husky",
+		"---RUN---": "",
+		"start": "node --enable-source-maps dist/index.js",
+		"dev": "bun run build && bun run start",
+		"build": "bun --run esbuild --bundle src/index.ts --outfile=dist/index.js",
+		"---TEST---": "",
+		"test": "vitest run",
+		"---CHECK---": "",
+		"check": "bun --run biome check . && bun type",
+		"fmt": "bun --bun biome format .",
+		"lint": "bun --bun biome lint .",
+		"type": "bun --bun tsc",
+		"---MISC---": "",
+		"clean": "rm -rf node_modules"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@types/bun": "latest",
+		"@types/node": "latest",
+		"esbuild": "^0.20.2",
+		"husky": "9",
+		"typescript": "latest",
+		"vitest": "^1.2.2"
+	}
+}
