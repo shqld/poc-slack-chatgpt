@@ -1,0 +1,42 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"ignore": ["**/*.raw.ts"],
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"all": true,
+				"noUnusedVariables": "warn"
+			},
+			"complexity": {
+				"noUselessConstructor": "off",
+				"noForEach": "off"
+			},
+			"nursery": {
+				"all": true,
+				"noNodejsModules": "off",
+				"useConsistentArrayType": {
+					"level": "warn",
+					"options": {
+						"syntax": "generic"
+					}
+				},
+				"noUselessLoneBlockStatements": "off",
+				"useImportRestrictions": "error"
+			},
+			"suspicious": {
+				"noShadowRestrictedNames": "off"
+			},
+			"style": {
+				"all": false
+			}
+		}
+	},
+	"formatter": {
+		"enabled": true
+	}
+}
