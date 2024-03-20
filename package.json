@@ -18,6 +18,9 @@
 		"---MISC---": "",
 		"clean": "rm -rf node_modules"
 	},
+	"dependencies": {
+		"@slack/bolt": "latest"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
 		"@types/bun": "latest",
